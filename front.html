@@ -9,17 +9,13 @@
 <body>
     <h1>Book Search</h1>
     <hr>
-    <h3>Please choose bewtween book title and author</h3>
+    <h3>You can search by title or keyword, by author, or both!</h3>
     <form id="searchForm">
-        <input type="radio" class="Criteria" id="byTitle">
-        <label for="byTitle">By title</label>
+        <input type="text" class= "Query" placeholder="Title or keyword" id="Title">
         <br>
-        <input type="radio" class="Criteria" id="byAuthor">
-        <label for="byAuthor">By author</label>
+        <input type="text" class= "Query" placeholder="Author" id="Author">
         <br>
-        <input type="text" placeholder="Enter search here." id="query">
-        <br>
-        <input type="submit">Search </input>
+        <input type="submit"></input>
     </form>
 
     <div id="Results"></div>
