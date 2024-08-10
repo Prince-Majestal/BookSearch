@@ -14,6 +14,8 @@ document.getElementById("searchForm").addEventListener('submit', function(event)
         else
         {
             query+='+'+field.dataset.param+field.value.trim();
-        }
+        }   
     });
+
+    fetch(`http://127.0.0.1:5000/booksearch?query=${query}`).then(response => response.text()).then(data => {console.log(data)}).catch(() => {console.log("An error has occured.")});
 })
