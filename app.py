@@ -10,6 +10,24 @@ API_KEY = os.getenv('GOOGLE_BOOKS_API_KEY')
 @app.route("/booksearch")
 def search():
     query = request.args.get('query')
-    books = requests.get(query, params={'key': API_KEY})
-    return jsonify(books.json())
+    response = requests.get(query, params={'key': API_KEY})
+    books = response.json()
+    results = []
+    for book in books.get('items', []):
+        info = book.get('volumeInfo', {})
+        title = info.get('title', "Title not available")
+        authors = info.get('authors', [])
+        description = info.get('description', "No description available")
+        image_link = info.get('imageLinks', {}).get('thumbnail', '')
+
+        book_dictionary = {
+            "title": title,
+            "authors": authors,
+            "description": description,
+            "image_link": image_link
+        }
+
+        results.append(book_dictionary)
+
+    return jsonify({"books": results})
     
