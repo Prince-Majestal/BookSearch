@@ -13,3 +13,5 @@ def search():
     books = requests.get(query, params={'key': API_KEY})
     return jsonify(books.json())
     
+if __name__ == '__main__':
+    app.run()
