@@ -25,3 +25,8 @@ On Linux:
 5) In the project directory create a .env file and write  GOOGLE_BOOKS_API_KEY=PASTE_YOUR API_KEY_HERE
 
 6) Finally, to use the app, use "gunicorn -p 4 -b 127.0.0.1:8000 app:app" and go to http://127.0.0.1:8000 . You are now ready to use the app! 
+
+
+On Windows:
+
+COMING SOON!
