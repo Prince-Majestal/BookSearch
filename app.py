@@ -31,3 +31,6 @@ def search():
 
     return jsonify({"books": results})
     
+if __name__ == '__main__':
+    app.run()
+
