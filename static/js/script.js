@@ -16,7 +16,7 @@ document.getElementById("searchForm").addEventListener('submit', function(event)
         }   
     });
 
-    fetch(`http://127.0.0.1:5000/booksearch?query=${query}`).then(response => response.json())
+    fetch(`http://127.0.0.1:8000/booksearch?query=${query}`).then(response => response.json())
     .then(data => {
         const resultDiv = document.getElementById('Results');
         resultDiv.innerHTML = '';
