@@ -1,6 +1,7 @@
 # BookSearch
 
-<img src="https://github.com/user-attachments/assets/e986d188-b2f9-45a7-b40c-326a216c7e90" width=200 />
+<img width="1624" alt="image" src="https://github.com/user-attachments/assets/1f593437-71a1-41a1-8b2c-d1e5f7d06ef2">
+
 
 
 ## Setup Guide
