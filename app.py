@@ -2,10 +2,10 @@ import os
 
 import requests
 from flask import Flask, request, jsonify, render_template
-#from flask_cors import CORS
+from flask_cors import CORS
 from dotenv import load_dotenv
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 API_KEY = os.getenv('GOOGLE_BOOKS_API_KEY') 
 
 @app.route('/')

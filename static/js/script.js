@@ -4,9 +4,15 @@ document.getElementById("searchForm").addEventListener('submit', function(event)
     let query = 'https://www.googleapis.com/books/v1/volumes?';
     let firstField = true;
     fields.forEach((field) => {
+        
+        if(field.value.trim() == "")
+        {
+            return;
+        }
+        
         if(firstField)
         {
-            query+=field.dataset.param+field.value.trim();
+            query+='q='+field.dataset.param+field.value.trim();
             firstField = false;
         }
 
@@ -16,7 +22,12 @@ document.getElementById("searchForm").addEventListener('submit', function(event)
         }   
     });
 
-    fetch(`http://127.0.0.1:8000/booksearch?query=${query}`).then(response => response.json())
+    query += "&maxResults=40";
+
+    let encodedQuery = encodeURIComponent(query);
+
+
+    fetch(`http://127.0.0.1:8000/booksearch?query=${encodedQuery}`).then(response => response.json())
     .then(data => {
         const resultDiv = document.getElementById('Results');
         resultDiv.innerHTML = '';
