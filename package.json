@@ -1,0 +1,14 @@
+{
+  "name": "booksearch",
+  "version": "1.0.0",
+  "description": "<img width=\"1624\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1f593437-71a1-41a1-8b2c-d1e5f7d06ef2\">",
+  "main": "static/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  }
+}
